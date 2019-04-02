@@ -6,7 +6,7 @@
     <router-link to="/player/1">1-1</router-link>
     <router-link to="/player/2">1-2</router-link>
     <router-view></router-view>
-
+    <hr/>
     <router-view name="myHeader"></router-view>
     <router-view name="mySlider"></router-view>
     <router-view name="myFooter"></router-view>
