@@ -67,10 +67,10 @@ console.log(`字符最多的是${char}，出现了${num}次`);
 
 
 // - 方法三
-var str = "asndjandandjkan";
+var newStr = "asndjandandjkan";
 var obj = {};
-for (let i = 0; i < str.length; i++) {
-	var key = str[i];
+for (let i = 0; i < newStr.length; i++) {
+	var key = newStr[i];
 	typeof obj[key] === "undefined" ? (obj[key] = 1) : obj[key]++;
 }
 var max = -1;
