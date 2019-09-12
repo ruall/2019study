@@ -64,3 +64,21 @@ str.replace(re,($0,$1) => {
     }
 });
 console.log(`字符最多的是${char}，出现了${num}次`);
+
+
+// - 方法三
+var str = "asndjandandjkan";
+var obj = {};
+for (let i = 0; i < str.length; i++) {
+	var key = str[i];
+	typeof obj[key] === "undefined" ? (obj[key] = 1) : obj[key]++;
+}
+var max = -1;
+var max_key = key;
+for (let key in obj) {
+	if (max < obj[key]) {
+		max = obj[key];
+		max_key = key;
+	}
+}
+console.log(max_key + "出现次数最多共计" + max + "次");
