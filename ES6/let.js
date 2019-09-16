@@ -3,13 +3,13 @@
  * */
 //ES5写法
 if(true){
-    var i = 1;
+  var i = 1;
 }
 console.log(i); //输出1
 
 //ES6写法
 if(true){
-    let l = 1;
+  let l = 1;
 }
 console.log(l) //控制台输出l未定义
 

@@ -12,20 +12,20 @@ mymap.set('PL', 'Perl')
 mymap.set('PY', 'Python')
 
 for (let val of list) {
-    console.log(val)
+  console.log(val)
 }
 
 for (let mystr of str){
-    console.log(mystr)
+  console.log(mystr)
 }
 
 for (let [key,val] of mymap){
-    console.log(key,val)
+  console.log(key,val)
 }
 
 let it = mymap.values();
 let tmp
 while (tmp = it.next()){
-    if(tmp.done) break
-    console.log(tmp.value,tmp.done)
+  if(tmp.done) break
+  console.log(tmp.value,tmp.done)
 }

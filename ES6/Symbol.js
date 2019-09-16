@@ -14,10 +14,10 @@ const VB = Symbol()
 var lang = Java
 
 if(lang === Java){
-    console.log('Java啊')
+  console.log('Java啊')
 }
 if(lang === Ruby){
-    console.log('Ruby啊')
+  console.log('Ruby啊')
 }
 
 
@@ -34,14 +34,14 @@ console.log(obj[s2])
 
 const MYKEY = Symbol()
 class User {
-    constructor(key,name,age){
-        this[MYKEY] = key
-        this.name = name
-        this.age = age
-    }
-    checkKEY(key){
-        return this[MYKEY] === key
-    }
+  constructor(key,name,age){
+    this[MYKEY] = key
+    this.name = name
+    this.age = age
+  }
+  checkKEY(key){
+    return this[MYKEY] === key
+  }
 }
 
 let user = new User(1,'张三',23)
