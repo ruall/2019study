@@ -67,14 +67,14 @@ console.log(`字符最多的是${char}，出现了${num}次`);
 
 
 // - 方法三
-var newStr = "asndjandandjkan";
-var obj = {};
+let newStr = "asndjandandjkan";
+let obj = {};
 for (let i = 0; i < newStr.length; i++) {
-  var key = newStr[i];
+  let key = newStr[i];
   typeof obj[key] === "undefined" ? (obj[key] = 1) : obj[key]++;
 }
-var max = -1;
-var max_key = key;
+let max = -1;
+let max_key = key;
 for (let key in obj) {
   if (max < obj[key]) {
     max = obj[key];
@@ -90,8 +90,8 @@ console.log(max_key + "出现次数最多共计" + max + "次");
  */
 // - 方法一
 function GetQueryString(name) {
-  var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
-  var r = window.location.search.substr(1).match(reg);
+  let reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+  let r = window.location.search.substr(1).match(reg);
   if (r != null) return unescape(r[2]);
   return null;
 }
