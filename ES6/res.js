@@ -74,7 +74,7 @@ for (let i = 0; i < newStr.length; i++) {
   typeof obj[key] === "undefined" ? (obj[key] = 1) : obj[key]++;
 }
 let max = -1;
-let max_key = key;
+let max_key = '';
 for (let key in obj) {
   if (max < obj[key]) {
     max = obj[key];
