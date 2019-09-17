@@ -19,14 +19,19 @@
 <!-- 2-通过template标签抽离 -->
 <template id="cpn">
   <div>
-    <h2>hello complate</h2>
+    <h2>{{name}}</h2>
   </div>
 </template>
 
 <script src="./vue.js"></script>
 <script>
   Vue.component('my-cpn',{
-    template: '#cpn'
+    template: '#cpn',
+    data(){
+      return{
+        name:'hello',
+      }
+    },
   })
 
   const app = new Vue({

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app">
+  <cpn :cname="name" @item-click="btn"></cpn>
+</div>
+
+<template id="cpn">
+  <div>
+    <button @click="itemClick(msg)">{{cname}}</button>
+  </div>
+</template>
+
+<script src="./vue.js"></script>
+<script>
+  const app = new Vue({
+    el:'#app',
+    data:{
+      name:'父组件',
+    },
+    components:{
+      cpn:{
+        template:'#cpn',
+        data(){
+          return{
+            msg:'123',
+          }
+        },
+        props:{
+          cname:{
+            type:String,
+            default:'',
+            required:true,//是否必传
+          },
+        },
+        methods:{
+          itemClick(item){
+            this.$emit('item-click',item)
+          }
+        },
+      }
+    },
+    methods: {
+      btn(item){
+        console.log(item)
+      }
+    }
+  })
+</script>
+</body>
+</html>
