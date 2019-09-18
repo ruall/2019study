@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98541a5c-5caa-4490-a314-87d1a4113ae5" name="Default Changelist" comment="NodeJs学习">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$" beforeDir="false" afterPath="$PROJECT_DIR$" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue2019/组件化开发/子组件向父组件传值.html" beforeDir="false" afterPath="$PROJECT_DIR$/vue2019/组件化开发/子组件向父组件传值.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../vue2019/组件化开发/vue.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../vue2019/组件化开发/组件化的基础使用.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../vue2019/组件化开发/组件模版的抽离写法.html" beforeDir="false" />
@@ -147,6 +145,9 @@
       <workItem from="1568686844700" duration="73000" />
       <workItem from="1568686936624" duration="636000" />
       <workItem from="1568687604787" duration="5195000" />
+      <workItem from="1568714424191" duration="67000" />
+      <workItem from="1568786350290" duration="402000" />
+      <workItem from="1568789094258" duration="2193000" />
     </task>
     <task id="LOCAL-00001" summary="vue2.5x学习及2x复习">
       <created>1554183771290</created>
@@ -218,7 +219,21 @@
       <option name="project" value="LOCAL" />
       <updated>1568713674097</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="vue父子组件通讯">
+      <created>1568714474629</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1568714474629</updated>
+    </task>
+    <task id="LOCAL-00012" summary="vue父子组件通讯双向绑定">
+      <created>1568797710667</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1568797710667</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -315,6 +330,7 @@
     <MESSAGE value="vue组件化开发" />
     <MESSAGE value="NodeJs学习" />
     <MESSAGE value="vue父子组件通讯" />
-    <option name="LAST_COMMIT_MESSAGE" value="vue父子组件通讯" />
+    <MESSAGE value="vue父子组件通讯双向绑定" />
+    <option name="LAST_COMMIT_MESSAGE" value="vue父子组件通讯双向绑定" />
   </component>
 </project>

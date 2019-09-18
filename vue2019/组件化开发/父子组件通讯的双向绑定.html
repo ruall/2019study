@@ -1,69 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
 </head>
+
 <body>
-<div id="app">
-  <cpn :name1="pname1" :name2="pname2" @ename1="dname1" @ename2="dname2"></cpn>
-</div>
-
-<template id="cpn">
-  <div>
-    <h2>data:{{cname1}}</h2>
-    <h2>props:{{name1}}</h2>
-<!--    <input type="text" v-model="cname1">-->
-    <input type="text" :value="cname1" @input="change1">
-    <h2>data:{{cname2}}</h2>
-    <h2>props:{{name2}}</h2>
-<!--    <input type="text" v-model="cname2">-->
-    <input type="text" :value="cname2" @input="change2">
+  <div id="app">
+    <cpn :name1="pname1" :name2="pname2" @ename1="dname1" @ename2="dname2"></cpn>
   </div>
-</template>
 
-<script src="./vue.js"></script>
-<script>
-  const app = new Vue({
-    el: "#app",
-    data: {
-      pname1:'111',
-      pname2:'222',
-    },
-    components: {
-      cpn: {
-        template: "#cpn",
-        props: {
-          name1:'',
-          name2:'',
-        },
-        data(){
-          return{
-            cname1:'',
-            cname2:'',
-          }
-        },
-        methods:{
-          change1(e){
-            this.cname1 = e.target.value
-            this.$emit('ename1',this.cname1)
+  <template id="cpn">
+    <div>
+      <h2>data:{{cname1}}</h2>
+      <h2>props:{{name1}}</h2>
+      <!-- <input type="text" v-model="cname1"> -->
+      <input type="text" :value="cname1" @input="change1">
+      <h2>data:{{cname2}}</h2>
+      <h2>props:{{name2}}</h2>
+      <!-- <input type="text" v-model="cname2"> -->
+      <input type="text" :value="cname2" @input="change2">
+    </div>
+  </template>
+
+  <script src="./vue.js"></script>
+  <script>
+    const app = new Vue({
+      el: "#app",
+      data: {
+        pname1: '111',
+        pname2: '222',
+      },
+      components: {
+        cpn: {
+          template: "#cpn",
+          props: {
+            name1: '',
+            name2: '',
           },
-          change2(e){
-            this.cname2 = e.target.value
-            this.$emit('ename1',this.cname2)
-          }
+          data() {
+            return {
+              cname1: '',
+              cname2: '',
+            }
+          },
+          methods: {
+            change1(e) {
+              this.cname1 = e.target.value
+              this.$emit('ename1', this.cname1)
+            },
+            change2(e) {
+              this.cname2 = e.target.value
+              this.$emit('ename1', this.cname2)
+            }
+          },
+        }
+      },
+      methods: {
+        dname1(val) {
+          this.pname1 = val
+        },
+        dname2(val) {
+          this.pname2 = val
         },
       }
-    },
-    methods: {
-      dname1(val){
-        this.pname1 = val
-      },
-      dname2(val){
-        this.pname2 = val
-      },
-    }
-  })
-</script>
+    })
+  </script>
 </body>
+
 </html>
