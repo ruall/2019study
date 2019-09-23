@@ -36,8 +36,14 @@
         cpn: {
           template: "#cpn",
           props: {
-            name1: '',
-            name2: '',
+            name1: {
+              type:String,
+              default:'',
+            },
+            name2: {
+              type: String,
+              default: '',
+            },
           },
           data() {
             return {
