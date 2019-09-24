@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+
+<body>
+  <div id="app">
+    <cpn ref='abc'></cpn>
+  </div>
+  <template id='cpn'>
+    <div>
+      <ccpn></ccpn>
+    </div>
+  </template>
+
+  <template id='ccpn'>
+    <div>
+        <h2>子组件</h2>
+        <button @click='fun'>按钮</button>
+    </div>
+  </template>
+
+  <script src="./vue.js"></script>
+  <script>
+    const app = new Vue({
+      el: "#app",
+      data: {
+        msg:'aaa',
+      },
+      components:{
+        cpn:{
+          template:'#cpn',
+          components:{
+            ccpn:{
+              template:'#ccpn',
+              methods:{
+                fun(){
+                  console.log(this.$parent)
+                  console.log(this.$root)
+                }
+              }
+            }
+          }
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>
