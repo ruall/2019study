@@ -2,20 +2,20 @@
  * ES6面向对象 类继承
  * */
 
-class Car{
-  constructor(brand){
+class Car {
+  constructor(brand) {
     this.brand = brand
   }
-  show(){
+  show () {
     console.log(`这辆车的品牌是${this.brand}`)
   }
 }
-class Lexus extends Car{
-  constructor(brand,lineup){
+class Lexus extends Car {
+  constructor(brand, lineup) {
     super(brand)
     this.lineup = lineup
   }
-  getPrice(){
+  getPrice () {
     switch (this.lineup) {
       case 'RX':
         return 60
@@ -27,6 +27,6 @@ class Lexus extends Car{
   }
 }
 
-let mycar = new Lexus('a','RX')
+let mycar = new Lexus('a', 'RX')
 mycar.show();
-console.log('价格是：',mycar.getPrice(),'万')
+console.log('价格是：', mycar.getPrice(), '万')
