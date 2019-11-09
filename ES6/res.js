@@ -23,7 +23,7 @@ console.log(fun(mm, { f: "张三" }));
  * */
 
 // - 方法一
-function findMaxDuplicateChar(str) {
+function findMaxDuplicateChar (str) {
   if (str.length === 1) {
     return str;
   }
@@ -89,7 +89,7 @@ console.log(max_key + "出现次数最多共计" + max + "次");
  * 获取地址栏参数
  */
 // - 方法一
-function GetQueryString(name) {
+function GetQueryString (name) {
   let reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
   let r = window.location.search.substr(1).match(reg);
   if (r != null) return unescape(r[2]);
@@ -99,7 +99,7 @@ alert(GetQueryString("id"));
 
 
 // - 方法二
-function parseParam(url) {
+function parseParam (url) {
   const paramsStr = /.+\?(.+)$/.exec(url)[1]; // 将 ? 后面的字符串取出来
   const paramsArr = paramsStr.split('&'); // 将字符串以 & 分割后存到数组中
   let paramsObj = {};
